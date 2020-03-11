@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS grupos; 
+use grupos;
+
+
+CREATE TABLE IF NOT EXISTS lideres(
+    id int(255) auto_increment not null,
+    color varchar(100),
+    CONSTRAINT pk_lideres PRIMARY KEY (id)
+)ENGINE=InnoDb;
+
+CREATE TABLE IF NOT EXISTS companeros(
+    id int(255) auto_increment not null,
+    lider_id int(255),
+    companero_id int(255),
+    CONSTRAINT pk_companeros PRIMARY KEY (id),
+CONSTRAINT fk_companeros_lideres FOREIGN KEY(lider_id) REFERENCES lideres(id)
+
+)ENGINE=InnoDb;
+
+INSERT INTO `lideres` (`id`, `color`) VALUES
+(1, 'red'),
+(2, 'blue'),
+(3, 'green'),
+(4, 'yellow'),
+(5, 'grey');
+
+INSERT INTO `companeros` (`id`, `lider_id`, `companero_id`) VALUES
+(1, 1, 2),
+(2, 3, 4),
+(3, 1, 5);

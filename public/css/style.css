@@ -1,0 +1,47 @@
+.cabecera{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200px;
+    font-size: 28px;
+    color: rgb(29, 82, 22);
+    width:700px;
+    margin:20px auto;
+}
+
+.container{
+    width:520px;
+    border: 1px solid black;
+    margin:auto;
+    position:relative;
+    top:50px;
+    padding:50px;
+}
+
+#tabla{
+    width: 300px;
+}
+
+.bola{
+    display: block;
+    border-radius: 50%;
+     -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+   
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 55px;
+    text-align: center;
+    background: radial-gradient(circle at 100px 100px, #3b7bc0, #000);
+}  
+
+
+
+.clearfix{
+    float: none;
+    clear:both;
+}
+
